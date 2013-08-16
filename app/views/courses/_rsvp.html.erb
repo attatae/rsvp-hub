@@ -1,0 +1,9 @@
+<div class="well">
+	<% if current_user && current_user.rsvped_for_class?(course) %>
+	<p>You're attending this class</p>
+	<p><%= link_to 'Cancel Rsvp', rsvp_course_path(course), class: 'btn btn-danger', method: 'delete' %></p>
+	<% else%>
+	<p>Would you like to sign up?</p>
+	<p><%= link_to 'RSVP for this class', rsvp_course_path(course), class: 'btn btn-success', method: 'post' %></p>
+	<% end %>
+</div>

@@ -5,4 +5,10 @@ class ApplicationController < ActionController::Base
     redirect_to root_path, :alert => exception.message
   end
 
+  private
+
+  def authenticate!
+    raise ActionController::RoutingError.new('Not Found') unless current_user
+  end
+
 end

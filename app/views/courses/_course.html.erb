@@ -14,5 +14,9 @@
   <h3>Description</h3>
   <p><%= course.description %></p>
 
+  <div class="rsvp-info">
+    <%= render :partial => 'rsvp', locals: { course: course } %>
+  </div>
+
 
 </section>

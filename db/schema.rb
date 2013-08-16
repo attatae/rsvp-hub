@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130816114726) do
+ActiveRecord::Schema.define(:version => 20130816170916) do
 
   create_table "courses", :force => true do |t|
     t.string   "name"
@@ -38,6 +38,13 @@ ActiveRecord::Schema.define(:version => 20130816114726) do
 
   add_index "roles", ["name", "resource_type", "resource_id"], :name => "index_roles_on_name_and_resource_type_and_resource_id"
   add_index "roles", ["name"], :name => "index_roles_on_name"
+
+  create_table "rsvps", :force => true do |t|
+    t.integer "user_id"
+    t.integer "course_id"
+  end
+
+  add_index "rsvps", ["user_id", "course_id"], :name => "index_rsvps_on_user_id_and_course_id"
 
   create_table "users", :force => true do |t|
     t.string   "email",                  :default => "", :null => false
