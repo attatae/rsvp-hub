@@ -1,0 +1,12 @@
+<div class="courses">
+	<h1>Classes</h1>
+	<% if @courses.present? %>
+		<% render @classes %>
+	<% else %>
+    <p>Sorry! No Classes </p>
+	<% end %>
+
+  <p class="actions">
+    <%= link_to 'Add New Class', new_course_path, class: 'btn btn-primary' %>
+  </p>
+</div>

@@ -1,0 +1,18 @@
+ <div>
+      <%= form_for @course, :html => { :multipart => true } do |f| %>
+    
+      <%= f.label :name %>
+      <%= f.text_field :name %>
+
+      <%= f.label :description %>
+      <%= f.text_area :description, :size => "20x10", placeholder: "add a description here..." %>
+
+      <%= f.label :address %>
+      <%= f.text_field :address %>
+
+      <%= f.label :city %>
+      <%= f.text_field :city %> 
+
+      <% end %>
+      
+    </div>
