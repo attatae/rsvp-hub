@@ -1,0 +1,6 @@
+<p class="actions">
+    <%= link_to 'Show', course_path(@course), class: 'btn' %>
+    <% if current_user.has_role? :admin %>
+      <%= link_to 'Delete', course, class: 'btn btn-danger', confirm: 'Are you sure?', method: 'delete' %>
+    <% end %>
+  </p>

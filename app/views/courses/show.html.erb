@@ -1,3 +1,8 @@
 <h3>Class</h3>
 
-<%= render 'course' %>
+<%= render @course %>
+
+<p class="actions">
+  	<%= link_to 'Edit', edit_course_path(@course), class: 'btn' %>
+  	<%= link_to 'Delete', @course, class: 'btn btn-danger', confirm: 'Are you sure?', method: 'delete' %>
+ </p>
