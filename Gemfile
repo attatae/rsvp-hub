@@ -28,6 +28,10 @@ group :development, :test do
   gem 'rspec-rails'
 end
 
+group :production do
+  gem 'pg', '0.15.1'
+end
+
 group :test do
   gem 'capybara'
   gem 'cucumber-rails', :require=>false

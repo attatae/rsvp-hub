@@ -1,0 +1,23 @@
+<section class="courses">
+	<h2><%= @course.name %></h2>
+
+  <h3><%= @course.address %>
+    <%= ",#{@course.city}" %>
+  </h3>
+
+  <h3>Date & Time</h3>
+  <p>
+    <strong>Starts At</strong> <%= @course.starts_at %>
+    <strong>Ends At</strong> <%= @course.ends_at %>
+  </p>
+
+  <h3>Description</h3>
+  <p><%= @course.description %></p>
+
+  <p class="actions">
+  	<%= link_to 'Show', course_path(@course), class: 'btn' %>
+  	<%= link_to 'Delete', course, class: 'btn btn-danger', confirm: 'Are you sure?', method: 'delete' %>
+
+  </p>
+
+</section>

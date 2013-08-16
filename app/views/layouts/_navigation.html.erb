@@ -16,6 +16,9 @@
     <li>
       <%= link_to "Welcome, #{current_user.email}", '#', class: 'navbar-link' %>
     </li>
+    <li>
+      <%= link_to 'Courses', courses_path %>
+    </li>
     <% if current_user.has_role? :admin %>
       <li>
       <%= link_to 'Admin', users_path %>
